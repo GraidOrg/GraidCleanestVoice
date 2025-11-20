@@ -55,7 +55,7 @@ class AudioManager: NSObject, ObservableObject {
     func setupAudioSession() {
         let audioSession = AVAudioSession.sharedInstance()
         // Enable recording AND playback, use speaker by default, allow Bluetooth
-        try? audioSession.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker, .allowBluetooth])
+        try? audioSession.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker, .allowBluetoothHFP])
         // Turn on the audio system
         try? audioSession.setActive(true)
     }
